@@ -1,0 +1,123 @@
+.content__wrapper--home {
+    background-color: #000;
+    overflow: hidden;
+    animation: fadeMainContent .005s linear 5s forwards; 
+}
+
+@keyframes fadeMainContent {
+    100% {
+        overflow: visible;
+    }
+}
+
+.nav--home {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: 1rem;
+
+    .nav__wrapper {
+        font-family: Morion;
+        font-weight: lightest;
+        width: 100%;
+
+        @media (min-width: 500px) {
+            width: 50%;
+            min-height: 15rem;
+            font-size: 1rem;
+        }
+
+        @media (min-width: 1250px) {
+            width: 25%;
+            min-height: 22.5rem;
+        }
+
+        .nav__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            height: 100%;
+            width: 100%;
+
+            box-shadow: 0 0 1px #202020;
+            border: 8px solid transparent;
+            padding: 2rem;
+
+            transition: all .4s ease;
+
+            h2 {
+                text-shadow: 0 0 1.5px #7A7A7A;
+                color: #000;
+                font-size: 3.25em;
+                font-weight: 400;
+                padding-bottom: 1rem;
+
+                margin-top: -10px;
+
+                transition: all .4s ease;
+            }
+
+            h3 {
+                color: #fff;
+                opacity: .5;
+                font-size: 2.25em;
+                font-weight: 400;
+
+                transition: opacity .4s ease;
+            }
+        }
+
+        &:hover {
+            .nav__item {
+                h2 {
+                    text-shadow: 0 0 0 #7A7A7A;
+                }
+
+                h3 {
+                    opacity: 1;
+                }
+            }
+
+            .nav__item--location {
+                border-color: #6E2844;
+                background-color: #4E1E31;
+
+                h2 {
+                    color: #DCA2A2;
+                }
+            }
+
+            .nav__item--characters {
+                border-color: #0F7064;
+                background-color: #05554B;
+
+                h2 {
+                    color: #C0C586;
+                }
+            }
+
+            .nav__item--media {
+                border-color: #415A64;
+                background-color: #2C3C43;
+
+                h2 {
+                    color: #A4D4B2;
+                }
+            }
+
+            .nav__item--data-vis {
+                border-color: #4B6092;
+                background-color: #2E3E64;
+
+                h2 {
+                    color: #CA9475;
+                }
+            }
+        }
+    }
+}
+
+.footer--home {
+    background-color: rgba(255, 255, 255, .05);
+}
