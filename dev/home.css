@@ -1,12 +1,14 @@
 .content__wrapper--home {
     background-color: #000;
     overflow: hidden;
-    animation: fadeMainContent .005s linear 6s forwards; 
+    animation: fadeMainContent 0s linear 5s forwards;
+    max-height: 100vh;
 }
 
 @keyframes fadeMainContent {
     100% {
         overflow: visible;
+        max-height: 100%;
     }
 }
 
@@ -15,46 +17,73 @@
     height: 100vh;
     max-height: 100vh;
     position: relative;
+    z-index: 0;
+    pointer-events: none;
 
-    h1 {
-        color: #fff;
-        font-size: 15rem;
-        letter-spacing: -.035em;
+    .hero__title {
         width: 100%;
-        position: absolute;
-        bottom: 5rem;
+        height: 100%;
+        display: inline-block;
 
-        span {
-            white-space: nowrap;
-            display: block;
+        top: 0;
+        position: fixed;
+
+        h1 {
+            color: #fff;
+            font-size: 12rem;
+            letter-spacing: -.035em;
+            overflow: hidden;
             transition: transform 0.05s linear;
+            width: 200vw;
+            position: absolute;
+            top: 15%;
+
+            @media (min-width: 750px) {
+                font-size: 14rem;
+            }
+
+            @media (min-width: 1000px) {
+                font-size: 16rem;
+            }
 
             &.title--right {
                 text-align: right;
-                transform: translateX(2rem);
+                right: 0;
+
+                span {
+                    animation-delay: 5.25s;
+                }
             }
 
             &.title--left {
-                transform: translateX(-35rem);
-                margin-top: -7rem;
+                margin-top: 14rem;
+                position: relative;
+
+                span {
+                    animation-delay: 5.45s;
+                }
+            }
+
+            span {
+                white-space: nowrap;
+                display: block;
+                transform: translate3d(0, 100%, 0);
+                opacity: 0;
+                animation: titleFade 1.5s ease forwards;
             }
         }
     }
+}
 
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        height: 5rem;
-        width: 1px;
-        border: .1px solid #fff;
-        opacity: .125;
-        bottom: 0;
-        left: 50%;
+@keyframes titleFade {
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
     }
 }
 
 .home__content {
+    z-index: 1;
     color: #fff;
     font-family: 'Spectral', Georgia, 'Times New Roman', Times, serif;
 
@@ -68,6 +97,7 @@
         margin: auto;
         margin-top: 15rem;
         font-size: 1.15rem;
+        padding: 2rem;
     }
 
     blockquote {
@@ -91,13 +121,12 @@
             color: #A180FF;
             &:hover {
                 color: #fff;
-            }
-            &::before {
                 background-color: #A180FF;
             }
         }
     }
 }
+
 .nav--home {
     display: flex;
     flex-wrap: wrap;
@@ -129,14 +158,14 @@
             height: 100%;
             width: 100%;
 
-            box-shadow: 0 0 1px #202020;
+            box-shadow: 0 0 1px #fff;
             border: 8px solid transparent;
             padding: 2rem;
 
             transition: all .4s ease;
 
             h2 {
-                text-shadow: 0 0 1.5px #7A7A7A;
+                text-shadow: 0 0 1.5px #ddd;
                 color: #000;
                 font-size: 3.25em;
                 font-weight: 400;
@@ -208,5 +237,6 @@
 }
 
 .footer--home {
+    z-index: 2;
     background-color: rgba(255, 255, 255, .05);
 }

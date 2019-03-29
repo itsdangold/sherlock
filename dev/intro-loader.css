@@ -17,19 +17,25 @@
     align-items: center;
     align-content: center;
 
-    animation: fadeIntroContainer .3s ease-in 6s forwards;
+    animation: fadeIntroContainer .3s ease-in 4.75s forwards;
 }
 
 .intro__loader {
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     svg {
-        animation: introScale 3.25s cubic-bezier(.5,.31,.43,1) 4s forwards;
+        animation: introScale 3.25s cubic-bezier(.5,.31,.43,1) 2.35s forwards;
         backface-visibility: hidden;
         will-change: transform;
-        transform: scale3d(.15, .15, .15);
+        transform: scale3d(.25, .25, .25);
         transform-origin: center;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
     }
 
     mask {
@@ -91,7 +97,7 @@
 
 @keyframes introScale {
     40% { 
-        transform: scale3d(.1253, .125, .125);
+        transform: scale3d(.2, .2, .2);
     }
     
     100% { 
