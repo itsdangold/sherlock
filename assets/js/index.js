@@ -1,16 +1,28 @@
-// $(document).ready(function(){
-//     var controller = new ScrollMagic.Controller({
-//         globalSceneOptions: {
-//             triggerHook: 'onCenter'
-//         }
-//     });
+$(document).ready(function(){
+    var controller = new ScrollMagic.Controller(
+        {
+            globalSceneOptions: {
+                duration: 200
+            }
+        }
+    );
 
-//     var scene = new ScrollMagic.Scene({triggerElement: '.hero__title', duration: 500, offset: 1000})
-//     .setTween('.title--right', 1, {translateX: '-100%'})
-//     .addTo(controller);
+    $('.content__text').each(function(){
+        var tween = TweenMax.to(this, 1, {className:'+=fade-in'});
+        var scene = new ScrollMagic.Scene({triggerElement: this})
+        .setTween(tween)
+        .addTo(controller);
+        
+    }
+    );
 
+    var tweenQuote = TweenMax.to(this, 1, {className:'+=fade-in'});
+    var fadeQuote = new ScrollMagic.Scene(
+        {triggerElement: 'blockquote'})
+        .setTween(tweenQuote    )
+        .addTo(controller);
 
-// });
+});
 
 window.addEventListener('scroll', function(){
     document.querySelector(".title--right").style.transform = `translateX(${(Math.round(scrollY))}px)`;

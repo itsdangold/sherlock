@@ -60,7 +60,7 @@
                 position: relative;
 
                 span {
-                    animation-delay: 5.45s;
+                    animation-delay: 5.5s;
                 }
             }
 
@@ -86,7 +86,7 @@
     z-index: 1;
     color: #fff;
     font-family: 'Spectral', Georgia, 'Times New Roman', Times, serif;
-
+    margin-bottom: 15rem;
     em {
         color: #A180FF;
         padding-right: .25rem;
@@ -95,15 +95,23 @@
     .content__text {
         max-width: 35rem;
         margin: auto;
-        margin-top: 15rem;
+        margin-top: 30rem;
         font-size: 1.15rem;
         padding: 2rem;
+        opacity: 0;
+        &.fade-in {
+            opacity: 1;
+        }
     }
 
     blockquote {
         margin: 3rem auto 7rem;
+        opacity: 0;
         &::before {
             color: #A180FF;
+        }
+        &.fade-in {
+            opacity: 1;
         }
     }
 
@@ -238,5 +246,5 @@
 
 .footer--home {
     z-index: 2;
-    background-color: rgba(255, 255, 255, .05);
+    background-color: rgba(255, 255, 255, .1);
 }
