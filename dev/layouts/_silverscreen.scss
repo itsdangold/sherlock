@@ -36,6 +36,13 @@
 
     a {
         color: #A6D8B4;
+        text-decoration: underline;
+        transition: all .25s ease;
+
+        &:hover {
+            background-color: rgb(74, 105, 84);
+            color: #fff;
+        }
     }
 
     em {
