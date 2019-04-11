@@ -47,4 +47,10 @@
             background: #212D32;
         }
     }
+
+    &.content--datavis {
+        &::after {
+            background: rgb(35, 49, 85);
+        }
+    }
 }

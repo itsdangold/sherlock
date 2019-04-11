@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>The Characters</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+</head>
+<body class='subpage content--datavis'>
+    <header>
+        <a href="index.html">The Life and Times of Sherlock Holmes</a>
+
+        <a href="#infoModal">
+            Info
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="8"></line>
+            </svg>
+        </a>
+        <section class='info__modal' id='infoModal'>
+            <a href="#0" class='modal__overlay'></a>
+            <div class="modal__content">
+                <a href="#0" class='modal--close'>
+                    Close
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </a>
+
+                <p>This little web site is a homage to the Sherlock Holmes’ story and was created as a piece of coursework for the <em>‘Narrative and Storytelling’</em> module at the <a href="http://ixdbelfast.org/" target='__blank' class='external-link'>Belfast School of Art</a>.
+                </p>
+
+                <p>The content on this website draws largely on copy from Wikipedia and IMDB.</p>
+                <p>The site is inspired by Ethan Marcotte’s <a href="https://alistapart.com/d/responsive-web-design/ex/ex-site-flexible.html" class='external-link' target="__blank">Victors & Villains</a> website, designed to illustrate his seminal article on <a href="https://alistapart.com/article/responsive-web-design" class='external-link' target="__blank">Responsive Web Design.</a></p>
+
+                <p class='modal__footer'>Design and Code by <a href="https://twitter.com/itsdangold" target='__blank' class='external-link'>Dan Gold</a>
+                </p>
+            </div>
+
+            </div>
+        </section>
+        
+    </header>
+
+    <main>
+        <section class='datavis__hero'>
+            <h1 class='hero__title'>Visualising Data</h1>
+        </section>
+
+        <section class='graph__wrapper'>
+            <div class="graph__container graph--collection">
+                <h2>Books by Collection</h2>
+                <canvas id="collection" width="400" height="400"></canvas> 
+            </div>
+
+            <div class="graph__container graph--totalwords">
+                <h2>Total Number of Words per Book</h2>
+                <canvas id="totalWords" width="400" height="400"></canvas> 
+            </div>
+        </section>
+    </main>
+
+    <nav class='nav__subpage'>
+        <a href="location.html" class="nav__wrapper">
+            <div class="nav__item nav__item--home">
+                <h4>Previous</h4>
+                <h3>The Silver Screen</h3>
+            </div>
+        </a>
+        <a href="silverscreen.html" class="nav__wrapper">
+            <div class="nav__item nav__item--characters">
+                <h4>Next</h4>
+                <h3>Introduction</h3>
+            </div>
+        </a>
+    </nav>
+    <footer class='footer__subpage'>
+        <p>Content Copyright <a href="https://mrmurphy.com" class='external-link' target='__blank'>Christopher Murphy</a> and other respective owners.</p>
+        <p>This site was designed and built by <a href="https://twitter.com/itsdangold" target='__blank' class='external-link'>Dan Gold</a>
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="/assets/js/holmes-data.js"></script>
+    <script src="/assets/js/datavis.js"></script>
+</body>
+</html>

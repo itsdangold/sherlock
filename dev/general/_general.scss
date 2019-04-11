@@ -235,7 +235,6 @@ header {
 
   &:hover {
     color: #fff;
-    text-decoration: none;
   }
 }
 
@@ -256,10 +255,10 @@ footer {
     padding-top: 1rem;
 
     a {
-      color: #927E4B;
+      color: rgb(150, 104, 62);
 
       &:hover {
-        background-color: #927E4B;
+        background-color: rgb(150, 104, 62);
       }
     }
   }
