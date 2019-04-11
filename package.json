@@ -4,7 +4,7 @@
   "description": "A front-end project surrouding the story of Sherlock Holmes",
   "main": "",
   "scripts": {
-    "post": "postcss dev/main.css -c postcss.config.js -o assets/css/style.css -w"
+    "start": "npx gulp watch"
   },
   "repository": {
     "type": "git",
@@ -18,12 +18,16 @@
   "homepage": "https://github.com/itsdangold/sherlock#readme",
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
     "autoprefixer": "^9.5.0",
+    "browser-sync": "^2.26.3",
     "cssnano": "^4.1.10",
-    "normalize.css": "^8.0.1",
-    "postcss-cli": "^6.1.2",
-    "postcss-import": "^12.0.1",
-    "precss": "^4.0.0"
+    "gulp": "^4.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0"
   },
   "browserslist": [
     "last 2 versions"

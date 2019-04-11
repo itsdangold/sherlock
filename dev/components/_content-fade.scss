@@ -1,0 +1,50 @@
+.subpage {
+    &::after {
+        content: '';
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: inherit;
+        width: 100%;
+        z-index: 10000;
+        animation: intro-slide 1s cubic-bezier(.8, 0, .7, .8) .5s forwards;
+        transform-origin: bottom;
+
+        @keyframes intro-slide {
+            100% {
+                transform: scale3d(1, 0, 1);
+            }
+        }
+    }
+
+    > * {
+        opacity: 0;
+        animation: content-fade .75s ease-in 1.25s forwards;
+
+        @keyframes content-fade {
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+
+    &.content--location {
+        &::after {
+            background: #331320;
+        }
+    }
+
+    &.content--characters {
+        &::after {
+            background: #033b35;
+        }
+    }
+
+    &.content--silverscreen {
+        &::after {
+            background: #212D32;
+        }
+    }
+}

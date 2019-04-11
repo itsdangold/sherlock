@@ -2,25 +2,20 @@ $(document).ready(function(){
     var controller = new ScrollMagic.Controller(
         {
             globalSceneOptions: {
-                duration: 200
+                triggerHook: 'onCenter'
             }
         }
     );
 
-    $('.content__text').each(function(){
-        var tween = TweenMax.to(this, 1, {className:'+=fade-in'});
-        var scene = new ScrollMagic.Scene({triggerElement: this})
+    $('.text__block').each(function(){
+        var tween = TweenMax.to(this, 1, {className: "+=fade-in"});
+        // var tween = TweenMax.fromTo(this, 1, {opacity:0, scale:0}, {opacity:1, scale:1});
+
+        var scene = new ScrollMagic.Scene({triggerElement: this, duration: $(window).height()/1.5})
         .setTween(tween)
         .addTo(controller);
-        
-    }
+        }
     );
-
-    var tweenQuote = TweenMax.to(this, 1, {className:'+=fade-in'});
-    var fadeQuote = new ScrollMagic.Scene(
-        {triggerElement: 'blockquote'})
-        .setTween(tweenQuote    )
-        .addTo(controller);
 
 });
 

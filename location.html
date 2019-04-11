@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Location</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body class='subpage content--location'>
+    <header>
+        <a href="index.html">The Life and Times of Sherlock Holmes</a>
+
+        <a href="#infoModal">
+            Info
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="8"></line>
+            </svg>
+        </a>
+        <section class='info__modal' id='infoModal'>
+            <a href="#0" class='modal__overlay'></a>
+            <div class="modal__content">
+                <a href="#0" class='modal--close'>
+                    Close
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </a>
+
+                <p>This little web site is a homage to the Sherlock Holmes’ story and was created as a piece of coursework for the <em>‘Narrative and Storytelling’</em> module at the <a href="http://ixdbelfast.org/" target='__blank' class='external-link'>Belfast School of Art</a>.
+                </p>
+
+                <p>The content on this website draws largely on copy from Wikipedia and IMDB.</p>
+                <p>The site is inspired by Ethan Marcotte’s <a href="https://alistapart.com/d/responsive-web-design/ex/ex-site-flexible.html" class='external-link' target="__blank">Victors & Villains</a> website, designed to illustrate his seminal article on <a href="https://alistapart.com/article/responsive-web-design" class='external-link' target="__blank">Responsive Web Design.</a></p>
+
+                <p class='modal__footer'>Design and Code by <a href="https://twitter.com/itsdangold" target='__blank' class='external-link'>Dan Gold</a>
+                </p>
+            </div>
+
+            </div>
+        </section>
+        
+    </header>
+
+    <main>
+        <section class='location__hero'>
+            <h1 class='page__title'>221b Baker Street</h1>
+            <figure>
+                <div>
+                    <video autoplay muted loop>
+                        <source src='/assets/img/bakerstreet-orbit.mp4'>
+                    </video>
+                </div>
+                <figcaption>221B Baker Street is the London address of the fictional detective Sherlock Holmes, created by the writer <em>Sir Arthur Conan Doyle.</em></figcaption>
+            </figure>
+
+            <div class='text__container'>
+                <p>At the time the Holmes stories were published, addresses in Baker Street did not go as high as 221. In fact, <em>number 85</em> was the last number of the street in 1890.</p>
+
+                <p>Baker Street was later extended, and in 1932 the <em>Abbey National Building Society</em> moved into premises at <em>219–229 Baker Street.</em> For many years, Abbey National employed a full-time secretary to answer mail addressed to Sherlock Holmes.</p>
+            </div>
+        </section>
+
+        <div class='location__map' id='map'></div>
+
+        <section class='location__body'>
+            <div class='text__container'>
+                <h2>The Sherlock Holmes Museum</h2>
+                <p id='mapScene1'>In 1990, a <em>blue plaque</em> signifying 221B Baker Street was installed at the Sherlock Holmes Museum, situated elsewhere on the same block, and there followed a <em>15-year dispute</em> between Abbey National and the Holmes Museum for the right to receive mail addressed to 221B Baker Street.</p>
+            </div>
+
+            <div class='text__container' id='mapScene2'>
+                <p>Since the closure of Abbey House in <em>2005</em>, ownership of the address by the Sherlock Holmes Museum has not been challenged. The Sherlock Holmes Museum is situated within an <em>1815 townhouse</em> very similar to the 221B described in the stories and is located between <em>237 and 241 Baker Street.</em></p>
+            </div>
+
+            <div class='text__container' id='mapScene3'>
+                <p>The museum displays exhibits in period rooms, wax figures and Holmes memorabilia, with the famous study overlooking Baker Street the highlight of the museum.</p>
+            </div>
+
+            <div class='text__container' id='mapScene4'>
+                <p>The description of the house can be found throughout the stories, including the 17 steps leading from the ground-floor hallway to the first-floor study. In <em>'A Study in Scarlet’ (1887)</em>, Conan Doyle writes:</p>
+    
+                <blockquote class='subpage__quote'>We met next day as he had arranged, and inspected the rooms at No. 221B, Baker Street, of which he had spoken at our meeting. They consisted of a couple of comfortable bedrooms and a single large airy sitting room, cheerfully furnished, and illuminated by two broad windows.</blockquote>
+            </div>
+
+            <div class="cta__container">
+                <a class='cta__button' href="https://www.visitlondon.com/things-to-do/place/48930-sherlock-holmes-museum" target="__blank">Visit the Museum</a>
+            </div>
+
+        </section>
+    </main>
+
+    <div class="footer__wrapper">
+        <nav class='nav__subpage'>
+            <a href="index.html" class="nav__wrapper">
+                <div class="nav__item nav__item--home">
+                    <h4>Previous</h4>
+                    <h3>Introduction</h3>
+                </div>
+            </a>
+            <a href="characters.html" class="nav__wrapper">
+                <div class="nav__item nav__item--characters">
+                    <h4>Next</h4>
+                    <h3>The Characters</h3>
+                </div>
+            </a>
+        </nav>
+        <footer class='footer__subpage'>
+            <p>Content Copyright <a href="https://mrmurphy.com" class='external-link' target='__blank'>Christopher Murphy</a> and other respective owners.</p>
+            <p>This site was designed and built by <a href="https://twitter.com/itsdangold" target='__blank' class='external-link'>Dan Gold</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    
+     <script src="/assets/js/location-map.js"></script>
+</body>
+</html>
