@@ -74,6 +74,13 @@
     background-color: rgba(0, 0, 0, .125);
 }
 
-footer {
+.footer__wrapper {
+    position: relative;
+    background-color: #000;
+    padding: 2rem;
     z-index: 20;
+
+    footer {
+        margin: 0;
+    }
 }
