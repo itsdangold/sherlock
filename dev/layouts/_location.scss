@@ -25,8 +25,8 @@
             overflow: hidden;
 
             &::before, &::after {
-                background-color: #2D0D1A;
-                opacity: .7;
+                background-color: rgb(58, 11, 30);
+                opacity: .825;
                 content: '';
                 z-index: 10;
                 position: absolute;
@@ -34,7 +34,7 @@
                 right: 0;
                 height: 100%;
                 width: 100%;
-                display: block;
+                display: inline-block;
                 bottom: 0;
             }
 
@@ -42,7 +42,7 @@
                 background-color: #2D0D1A;
                 opacity: 1;
 
-                animation: imageReveal 1s ease-out 1.35s forwards;
+                animation: imageReveal 1.5s ease-out 1.5s forwards;
                 transform-origin: bottom;
 
                 @keyframes imageReveal {
@@ -104,7 +104,10 @@
         }
 
         div {
-            max-width: 50rem;
+            max-width: 40rem;
+            video {
+                width: 100vw;
+            }
         }
 
         figcaption {
