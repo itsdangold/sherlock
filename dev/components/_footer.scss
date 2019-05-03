@@ -1,0 +1,32 @@
+footer {
+    margin: 1rem;
+    padding: 2rem;
+    padding-bottom: 3rem;
+  
+    color: #fff;
+  
+    border-radius: .125rem;
+  
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  
+    p {
+      padding-top: 1rem;
+  
+      a {
+        color: rgb(150, 104, 62);
+  
+        &:hover {
+          background-color: rgb(150, 104, 62);
+        }
+      }
+    }
+  
+    hr {
+      width: 100%;
+      margin: 2rem 0 1rem 0;
+      color: #fff;
+      opacity: .1;
+    }
+}
