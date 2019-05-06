@@ -13,12 +13,16 @@ footer {
   
     p {
       padding-top: 1rem;
+    }
+
+    .external-link {
+      color: rgb(216, 184, 104);
   
-      a {
-        color: rgb(150, 104, 62);
-  
-        &:hover {
-          background-color: rgb(150, 104, 62);
+      &:hover {
+        border-color: rgba(255, 255, 255, 0.3);
+    
+        &::before {
+          background-color: rgba(255, 255, 255, 0.3);
         }
       }
     }

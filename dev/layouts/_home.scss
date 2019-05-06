@@ -105,23 +105,33 @@
         position: relative;
         z-index: 10;
 
+        max-width: 70ch;
+        font-size: 1.5rem;
+        padding: 0 2rem;
+        margin: auto;
+
         &.fade-in {
             opacity: 1;
         }
 
-        .text__wrapper {
-            max-width: 35rem;
-            font-size: 1.15rem;
-            padding: 0 2rem;
-            position: fixed;
-            top: 40%;
-            z-index: 11;
+        p {
+            opacity: .9;
+        }
+
+        p:first-letter {
+            letter-spacing:0;
+            text-transform:uppercase;
+            color: rgb(255, 255, 255);
+            font-size: 3.25em;
+            float: left;
+            margin: 0.15em 0.125em 0 0;
+            line-height: 0.7;
         }
     
         blockquote {
-            margin-top: 1rem;
-            position: fixed;
-            z-index: 12;
+            margin-top: 3rem;
+            font-size: 1.15em;
+            
             &::before {
                 color: #A180FF;
             }
@@ -181,15 +191,14 @@
             height: 100%;
             width: 100%;
 
-            box-shadow: 0 0 1px rgba(255, 255, 255, 0.35);
+            box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
             border: 8px solid transparent;
             padding: 2rem;
 
             transition: all .4s ease;
 
             h2 {
-                text-shadow: 0 0 1.5px #ddd;
-                color: #000;
+                color: rgb(214, 214, 214);
                 font-size: 3.25em;
                 font-weight: 400;
                 padding-bottom: 1rem;
@@ -208,6 +217,11 @@
                 transition: opacity .4s ease, transform .4s ease;
                 transform-origin: left bottom;
             }
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px dashed #fff;
         }
 
         &:hover {

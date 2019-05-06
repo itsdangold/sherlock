@@ -62,10 +62,16 @@
     }
 
     .character__icon {
-        margin-right: 2rem;
+        margin-right: 3rem;
+        display: none;
+
+        @media (min-width: 850px) {
+            display: inherit;
+        }
+
         svg {
-            width: 6em;
-            height: 6em;
+            width: 9em;
+            height: 9em;
             background:  #0C4D45;
             padding: 1.25rem;
             border-radius: 100%;
@@ -75,7 +81,7 @@
 
     p {
         color: #fff;
-        font-size: .9rem;
+        font-size: 1.3rem;
 
         + p {
             padding-top: 1rem;
@@ -83,7 +89,7 @@
     }
 
     em {
-        color: #86F7BA;
+        color: #BEC286;
     }
 
     @media (min-width: 850px) {
