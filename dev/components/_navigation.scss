@@ -1,8 +1,7 @@
 .nav__subpage {
     display: flex;
     flex-wrap: wrap;
-    margin: 1rem;
-    margin-top: 5rem;
+    margin: 2rem 0;
 
     .nav__wrapper {
         font-family: 'Morion', 'Spectral', 'Georgia', serif;
@@ -72,15 +71,4 @@
 
 .footer__subpage {
     background-color: rgba(0, 0, 0, .125);
-}
-
-.footer__wrapper {
-    position: relative;
-    background-color: #000;
-    padding: 2rem;
-    z-index: 20;
-
-    footer {
-        margin: 0;
-    }
 }
