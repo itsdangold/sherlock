@@ -22,13 +22,6 @@ footer {
 
     .external-link {
       color: rgb(216, 184, 104);
-  
-      &:hover {
-    
-        &::before {
-          background-color: rgb(216, 184, 104);
-        }
-      }
     }
   
     hr {

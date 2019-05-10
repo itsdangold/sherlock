@@ -137,25 +137,6 @@
             }
         }
     }
-
-    .text__banner {
-        max-width: 35rem;
-        background-color: #111;
-        padding: 2rem;
-        font-size: 1rem;
-        border-radius: .25rem;
-        margin: auto;
-        opacity: .85;
-
-        .external-link {
-            z-index: 1;
-            color: #A180FF;
-            &:hover {
-                color: #fff;
-                background-color: #A180FF;
-            }
-        }
-    }
 }
 
 .nav--home {

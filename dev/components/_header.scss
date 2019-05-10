@@ -31,12 +31,6 @@ header {
 
   .external-link {
     color: rgb(181, 154, 255);
-
-    &:hover {
-      &::before {
-        background-color: rgb(117, 82, 214);
-      }
-    }
   }
   
   .info__modal {

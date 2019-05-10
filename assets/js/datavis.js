@@ -31,7 +31,7 @@ bookCollectionOriginal.sort();
 
 
 var bookCollectionDonut = new Chart(document.getElementById('collection'), { 
-    "type": "doughnut", 
+    "type": "pie", 
     "data": { 
         "labels": bookCollectionNames,
         "datasets": [{ 
@@ -49,18 +49,24 @@ var bookCollectionDonut = new Chart(document.getElementById('collection'), {
         }] 
     },
     "options": {
+        rotation: 1 * Math.PI,
+        circumference: 1 * Math.PI,
         "legend": {
+            "display": false,
+            "fullWidth" : true,
             "labels": {
+                "padding": 20,
+                "boxWidth": 20,
                 "fontColor": "white",
                 "fontSize": 16,
-                "fontFamily": 'Georgia'
+                "fontFamily": 'Georgia',
             }
         },
         "animation": {animateRotate: true}
     }
 });
 
-var bookCollectionDonut = new Chart(document.getElementById('totalWords'), { 
+var bookWordCount = new Chart(document.getElementById('totalWords'), { 
     "type": "line", 
     "data": { 
         "labels": bookAbbrOriginal,
@@ -75,11 +81,20 @@ var bookCollectionDonut = new Chart(document.getElementById('totalWords'), {
     },
     "options": {
         "legend": {
-            "labels": {
-                "fontColor": "white",
-                "fontSize": 16,
-                "fontFamily": 'Georgia'
-            }
-        }
+            "display": false
+        },
+        "scales": {
+            "yAxes": [{
+                "ticks": {
+                    'beginAtZero': true,
+                    'fontColor': 'white'
+                },
+            }],
+          "xAxes": [{
+                "ticks": {
+                    'fontColor': '#a1bcff'
+                },
+            }]
+        } 
     }
 });

@@ -93,17 +93,16 @@ blockquote {
     bottom: 0;
     width: 100%;
     height: 2px;
-    transform: scaleX(0);
-    transform-origin: center;
     display: inline-block;
     transition: all .25s ease;
     z-index: -1;
+    background-color: currentColor;
   }
 
   &:hover {
-    color: #fff;
     &::before {
-      transform: scaleX(1);
+      transform: translateY(.125rem);
+      opacity: 0;
     }
    
   }
